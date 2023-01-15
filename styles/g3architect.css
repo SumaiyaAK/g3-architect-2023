@@ -220,10 +220,6 @@ main{
     grid-template-columns: repeat(2, 1fr);
 }
 
-.some-facts{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
 
 
 
