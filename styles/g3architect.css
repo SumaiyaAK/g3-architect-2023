@@ -30,7 +30,9 @@ nav li{
 
 .header{
     background: rgba(255, 144, 14, 0.1);
+    width: 100%;
     min-height: 130vh;
+    
     
 
 }
@@ -84,9 +86,15 @@ button{
 
 
 .banner-image{
-    margin-left: 240px;
-    margin-top: 30px;
-    position:absolute;
+    
+   position: absolute;
+   width: 1440px;
+   height: 700px;
+   left: 220px;
+   top: 500px;
+    
+
+    
 }
 
 /* Features style */
@@ -100,7 +108,7 @@ main{
 .container{
     display: flex;
     margin: 50px 50px;
-    gap: 80px;
+    gap: 60px;
     
 
 }
@@ -138,7 +146,11 @@ main{
 
 .content-header{
     display: flex;
-    gap: 30px;
+    gap: 20px;
+}
+
+.content-details{
+    margin-left: 100px;
 }
 
 .content-heading{
@@ -184,6 +196,7 @@ main{
     left: 80px;   
 }
 
+
 .pro-button{
     width: 265px;
     height: 160px;
@@ -214,16 +227,12 @@ main{
 
 /* some facts styles */
 
-.facts{
-    margin: 100px 160px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.facts-container{
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-
-.Facts-title{
+.facts-title{
     color:#131313;
     font-size: 35px;
     font-family: 'Poppins', sans-serif;
@@ -235,11 +244,7 @@ main{
     font-family: 'Poppins', sans-serif;
 }
 
-.box-container{
-    position: relative;
-    width: 1500px;
-    height: 300px;
-    margin: 80px auto;
+.box-container{    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     
@@ -250,7 +255,7 @@ main{
     position: relative;
     width: calc(375px - 30px);
     height: calc(300px - 30px);
-    background: #fff;
+    background: rgb(255, 255, 255);
     border: 2px solid rgb(253, 139, 32);
     float: left;
     margin: 15px;
@@ -260,8 +265,7 @@ main{
 }
 
 .box-container .box .box-icon{
-    position: absolute;
-    
+    position: absolute;   
     top: 0px;
     left: 0px;
     height: 100%;
@@ -326,6 +330,50 @@ main{
     font-family: 'Poppins', sans-serif;
 }
 
+/* section architects types */
+
+
+.architect-types{
+    display: flex;
+    flex-direction:column;
+    margin-top: 50px;
+}
+
+.architect-head{
+    color:#131313;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+
+}
+
+.architect-menu {
+    width: 1000px;
+    height: 200px;
+    background: rgba(255, 144, 14, 0.1);
+    border-radius: 10px;
+    transition: width 2s, height 4s;
+    overflow: hidden;
+    margin: 40px 0px;
+    box-shadow: 0 4px 8px 0 rgba(94, 94, 94, 0.2), 0 6px 20px 0 rgba(73, 73, 73, 0.19);
+
+  }
+
+  .architect1{
+    color:#5a5a5a;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    justify-content: space-between;
+    margin:80px;
+    
+  }
+
+  .architect-menu:hover {
+    width: 1500px;
+    height: 500px;
+  }
+
 /* sponser styles */
 
 .sponser-container{
@@ -387,32 +435,30 @@ footer{
 
 
 @media only screen and (max-width: 576px) {
-
-
-    nav, .banner, .container, .display-features {
+   
+    .container, 
+    .display-features {
         display:flex;
         flex-direction: column-reverse;
         width: 100%;
     }
 
-    .container, .content-details, .sponser-container, .sponser-contents, .footer-tag{
+     nav, nav ul, 
+    .banner,
+    .container, 
+    .content-details, 
+    .sponser-container, 
+    .sponser-contents,  
+    .facts-container, .footer{
         display:flex;
         flex-direction: column;
         
     }
-
-    .some-facts{
-        display:grid ;
-        grid-template-columns: repeat(1, 1fr);
-    }
-
     .box-container{
         display:grid ;
         grid-template-columns: repeat(1, 1fr);
     }
-
-
-    
+   
 }
 
 
